@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Walmart Price Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="register_page">
+        <div class="form">
+            <form action="/predict" method="post">
+                <label class='select_label'>Month </label>
+                
+                <Select id='Month' name='Month'>
+                <option value='1'>January</option>
+                 <option  value="3" >February</option>
+                 <option  value="4" >March</option>
+                 <option  value="12" >April</option>
+                 <option  value="11" >May</option>
+                 <option  value="6" >June</option>
+                 <option  value="8" >July</option>
+                 <option  value="5" >August</option>
+                 <option  value="7" >September</option>
+                 <option  value="10" >October</option>
+                 <option  value="2" >November</option>
+                 <option  value="9" >December</option>
+                </Select><br>
+                 <label class='select_label'>Day</label>
+                <Select id='Day' name='Day'>
+                <option value='5'>Sunday</option>
+                 <option value="3" >Monday</option>
+                 <option value="0" >Tuesday</option>
+                 <option value="4" >Wednesday</option>
+                 <option value="6" >Thursday</option>
+                 <option value="1" >Friday</option>
+                 <option  value="2" >Saturday</option>
+                </Select><br>
+                <label class='select_label'>Special Holiday</label>
+                <Select id='Holiday' name='Holiday'>
+                <option value='1'>Yes</option>
+                 <option value="0" >No</option>
+                </Select><br>    
+                Number of Stores: <input type="number" name='store' placeholder="Enter the Number of Stores"><br>
+                Temperature: <input type="float" name='temperature' placeholder="Enter the Temperature"><br>
+                Fuel Price: <input type="float" name='fuel_price' placeholder="Enter the fuel price"><br>
+                Customer Price Index: <input type="float" name='CPI' placeholder="Enter the Customer Price Index"><br>
+                Rate of Unemployment: <input type="float" name='Unemployment' placeholder="Enter the rate of Unemployment"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> The Predicted Walmart Sales is: {{data}}</p>
+        
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
