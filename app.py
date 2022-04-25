@@ -36,7 +36,7 @@ def predict():
     final_arr = final_arr.astype(np.float64)
     print(final_arr)
     pred = model.predict([final_arr])
-    output=round(pred[0],2)
+    output= abs(round(pred[0],2))
     return render_template('index.html', data=output)
 
 
