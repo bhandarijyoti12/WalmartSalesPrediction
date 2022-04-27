@@ -2,6 +2,13 @@ body{
     background: cornflowerblue;
     height: 100vh;
 }
+.title{
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    margin: 25px 10px;
+}
 .register_page{
     width: 360px;
     margin: auto;
