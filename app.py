@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pickle
-from sklearn.preprocessing import OneHotEncoder
-import joblib
 import pandas as pd
 
 
